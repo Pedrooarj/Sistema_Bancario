@@ -1,7 +1,3 @@
-# Sistema_Bancario
-Trabalho Boas Práticas de Programação
-
-
 # Sistema Bancário Simples
 
 Simulação de um sistema bancário básico para controle de clientes, contas e operações financeiras.

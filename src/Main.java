@@ -11,7 +11,7 @@ public class Main {
 
         ServicoCliente servicoCliente = new ServicoCliente(clienteRepo);
         ServicoConta servicoConta = new ServicoConta(contaRepo);
-        ServicoRelatorio servicoRelatorio = new ServicoRelatorio(clienteRepo, contaRepo);
+        ServicoRelatorio servicoRelatorio = new ServicoRelatorio(contaRepo);
 
         Cliente maria = servicoCliente.cadastrarCliente("Maria Souza", "12345678901");
         Cliente joao = servicoCliente.cadastrarCliente("João Pereira", "98765432100");
@@ -23,6 +23,6 @@ public class Main {
         servicoConta.depositar("003", BigDecimal.valueOf(100));
         servicoConta.aplicarRendimento("002", BigDecimal.valueOf(5));
 
-        servicoRelatorio.imprimirResumoBanco();
+        servicoRelatorio.imprimirRelatorioCompleto();
     }
 }

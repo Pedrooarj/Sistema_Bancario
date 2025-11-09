@@ -49,13 +49,13 @@ sistema-bancario/
 │           │   ├── ServicoConta.java
 │           │   └── ServicoRelatorio.java
 │           │
-│           ├── fabrica/             # Factory Pattern
-│           │   └── FabricaContas.java
+│           ├── ui/             # Exibição da interface gráfica
+│           │   └── BancoConsoleUI.java
 │           │
 │           ├── facade/              # Facade Pattern
 │           │   └── SistemaBancario.java
 │           │
-│           └── Main.java            # Aplicação principal
+│   └── Main.java            # Aplicação principal
 │
 ├── bin/                             # Arquivos compilados (.class)
 ├── .gitignore
@@ -87,7 +87,7 @@ javac -d bin -cp bin src/Main.java
 
 Ou compile tudo de uma vez:
 ```bash
-javac -d bin src/com/banco/**/*.java src/com/banco/*.java
+javac -d bin src/com/banco/**/*.java src/*.java
 ```
 
 ## Como Executar
@@ -177,9 +177,6 @@ Dependência de abstrações, não de implementações concretas:
 
 ### Padrões de Projeto
 
-#### Factory Method
-`FabricaContas` centraliza a criação de diferentes tipos de conta.
-
 #### Facade
 `SistemaBancario` fornece interface simplificada para todo o sistema.
 
@@ -201,7 +198,7 @@ Dependência de abstrações, não de implementações concretas:
 - [x] Camada de modelo completa
 - [x] Camada de repositório
 - [x] Camada de serviço
-- [ ] Interface de usuário (em desenvolvimento)
+- [x] Interface de usuário
 - [ ] Testes unitários (planejado)
 - [ ] Vídeo de apresentação (planejado)
 

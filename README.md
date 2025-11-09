@@ -82,7 +82,7 @@ javac -d bin -cp bin src/com/banco/repositorio/*.java
 javac -d bin -cp bin src/com/banco/fabrica/*.java
 javac -d bin -cp bin src/com/banco/servico/*.java
 javac -d bin -cp bin src/com/banco/facade/*.java
-javac -d bin -cp bin src/com/banco/Main.java
+javac -d bin -cp bin src/Main.java
 ```
 
 Ou compile tudo de uma vez:
@@ -96,7 +96,18 @@ javac -d bin src/com/banco/**/*.java src/com/banco/*.java
 
 Após compilar, execute:
 ```bash
-java -cp bin com.banco.Main
+java -cp bin Main
+```
+## Compilação e Execução por Script
+
+- **Windows** 
+```
+build.bat
+```
+- **Linux/macOs** 
+```
+chmod +x build.sh
+./build.sh
 ```
 
 ## Funcionalidades
@@ -188,8 +199,8 @@ Dependência de abstrações, não de implementações concretas:
 
 - [x] Estrutura básica criada
 - [x] Camada de modelo completa
-- [ ] Camada de repositório (em desenvolvimento)
-- [ ] Camada de serviço (em desenvolvimento)
+- [x] Camada de repositório
+- [x] Camada de serviço
 - [ ] Interface de usuário (em desenvolvimento)
 - [ ] Testes unitários (planejado)
 - [ ] Vídeo de apresentação (planejado)

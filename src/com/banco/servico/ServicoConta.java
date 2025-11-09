@@ -63,7 +63,20 @@ public class ServicoConta {
         destino.depositar(valor);
     }
 
-    public void aplicarRendimento(String numeroConta, BigDecimal percentual) {
+    public void aplicarRendimentoEmTodas(BigDecimal percentual) {
+    if (percentual == null || percentual.compareTo(BigDecimal.ZERO) < 0) {
+        throw new IllegalArgumentException("Percentual inválido para rendimento.");
+    }
+
+    contaRepositorio.listarTodos().forEach(conta -> {
+        try {
+            aplicarRendimento(conta.getNumeroConta(), percentual);
+        } catch (IllegalArgumentException e) {
+        }
+    });
+}
+
+    private void aplicarRendimento(String numeroConta, BigDecimal percentual) {
         ContaBancaria conta = buscarContaObrigatoria(numeroConta);
 
         if (conta instanceof ContaPoupanca poupanca) {

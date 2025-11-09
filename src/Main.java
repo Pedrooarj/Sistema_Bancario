@@ -19,9 +19,11 @@ public class Main {
         servicoConta.criarContaCorrente("001", maria, BigDecimal.valueOf(1000));
         servicoConta.criarContaPoupanca("002", maria, BigDecimal.valueOf(500));
         servicoConta.criarContaCorrente("003", joao, BigDecimal.valueOf(200));
+        servicoConta.criarContaPoupanca("004", joao, BigDecimal.valueOf(700));
+
 
         servicoConta.depositar("003", BigDecimal.valueOf(100));
-        servicoConta.aplicarRendimento("002", BigDecimal.valueOf(5));
+        servicoConta.aplicarRendimentoEmTodas(BigDecimal.valueOf(5));
 
         servicoRelatorio.imprimirRelatorioCompleto();
     }
